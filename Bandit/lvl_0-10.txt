@@ -1,0 +1,109 @@
+========== lvl_0 ==========
+ssh into the server. To do this, type:
+	ssh -p 2220 bandit0@bandit.labs.overthewire.org
+The p flag followed by the number means that you will connect to port 2220.
+Cat the readme file to get the password for the next level.
+	********************************
+	boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+	********************************
+To exit from the server, simply type exit and press enter.
+
+========== lvl_1 ==========
+ssh into the server using bandit1 as your username and the password you have just
+found as your password.
+Look for the password in the file called '-'. Use cat and ./.
+	cat ./-
+	********************************
+	CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+	********************************
+
+========== lvl_2 ==========
+bandit2 is now your username.
+This filename has spaces in it. Use \ as an escape character.
+	cat spaces\ in\ this\ filesname
+You can also use vim and then press tab.
+	vim spaces\ in\ this\ filename
+	********************************
+	UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+	********************************
+
+========== lvl_3 ==========
+bandit3 is your username.
+The file is hidden in the inhere directory.
+	ls -la
+This will list all the files in the current directory, even the hidden ones.
+The filename will be called '.hidden'.
+	cat ./.hidden
+This will get you the password, same as in the previous cases.
+	********************************
+	pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+	********************************
+
+========== lvl_4 ==========
+bandit4 is your username.
+Since the password is stored in the only human readable file. We
+have to use the file command to see which is ASCII text.
+	file ./-file0* | grep ASCII
+We use the * wildcard to select many. grep ASCII will grab all the ascii
+type files.
+	********************************
+	koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+	********************************
+
+========== lvl_5 ==========
+bandit5
+We are given some of the properties of the file.
+	find -size 1033c ! -executable
+This will find the file of size 1033 bytes and non-executable.
+	cat ./maybehere07/.file2
+	********************************
+	DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+	********************************
+
+========== lvl_6 ==========
+bandit6
+The file is somewhere on the server and we are again given some of the
+file's properties.
+	cd ../..
+This will take you back past home on the server.
+	find -size 33c -user bandit7 -group -bandit6 2>/dev/null
+This will find the file with the appropriet permissions and also get rid of the
+'Permission denied' messages that come up. It redirects error messages to /dev/null.
+	********************************
+	HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+	********************************
+
+========== lvl_7 ==========
+bandit7
+The password is next to the word 'millionth'.
+	cat data.txt | grep millionth
+Remember that grep grabs a line from a file matching the search term.
+	********************************
+	cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+	********************************
+
+========== lvl_8 ==========
+bandit8
+The password is on a line that only occures once in the given text.
+	cat data.txt | sort | uniq -u
+This gets the unique line after sorting it.
+	********************************
+	UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+	********************************
+
+========== lvl_9 ==========
+bandit9
+Use the strings command as it finds text in files.
+	strings data.txt | grep =
+	********************************
+	truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+	********************************
+
+========= lvl_10 =========
+bandit10
+The file is base64 encoded.
+	base64 -d data.txt
+The -d flag decodes the text.
+	********************************
+	IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+	********************************

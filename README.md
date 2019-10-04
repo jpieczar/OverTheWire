@@ -16,7 +16,7 @@ pass.txt
 	This file contains the passwords
 	for the bandit challenge.
 
-walk.txt (Coming soon)
+walk.txt
 	This file is a walkthough of the
 	bandit challenge.
 # # # # # # # # # # # # # # #

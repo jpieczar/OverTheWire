@@ -1,0 +1,31 @@
+========== lvl_11 =========
+bandit11
+The text in this file has been rotated by 13 positions.
+You can use the 'tr' command to do a 'translation' to decode the password.
+Rot13 means that A == N, M == Z, Z == M and N == A. The same goes for lowercase
+letters.
+	cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The 1st set 'A-Za-z' is what is to be replaced. The 2nd set is how they will be replaced.
+	********************************
+	5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+	********************************
+
+========== lvl_12 =========
+bandit12
+	cat data.txt | xxd -r > data
+This will pipe the hexdump into the xxd command to reverse and feed into a file called data.
+Using file we see that it has been compressed using gzip.
+We will now rename it and decompress using 'gzip'.
+	mv data data.gz
+	gzip -d data.gz
+Using file we see that it has been compressed using bzip2. We will do similarly to above
+in order to unpack this.
+	mv data data.bz2
+	bzip2 -d data.bz2
+Keep doing this. You will also have instances where you have to unpack using tar.
+	tar -xf filename
+Keep in mind that in order to unpack the gzip files you need to rename the file so that it
+ends in .gz.
+	********************************
+	8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+	********************************
