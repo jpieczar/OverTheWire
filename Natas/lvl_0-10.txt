@@ -1,0 +1,27 @@
+========== lvl_0 ==========
+Log into the site using the given username and password.
+	natas0
+	natas0
+View the page source to see the password.
+	********************************
+	gtVrDuiDfck831PqWsLEZy5gyDz1clto	
+	********************************
+This is the password for natas1, the next challenge.
+
+========== lvl_1 ==========
+Log into natas1 using the newly found password.
+The right click button has been disabled, you will have to
+use f12 in order to view the page's source code and get the
+password.
+	********************************
+	ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
+	********************************
+
+========== lvl_2 ==========
+In this level, view the page source and copy the image
+link thing to a new tab (or the same one). Remove the filename
+in order to see the 'Index of /files'. Go to users.txt to get
+the password.
+	********************************
+	sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+	********************************
